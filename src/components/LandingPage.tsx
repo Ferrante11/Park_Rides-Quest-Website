@@ -16,6 +16,67 @@ function scrollToSection(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 }
 
+function PrettyTitle() {
+  const title = "Park Rides Quest";
+
+  const outlineStyle: React.CSSProperties = {
+    color: "rgba(0,0,0,0.22)",
+  };
+
+  // Like your Flutter Stack: 4 outlines + main text with shadow
+  return (
+    <div className="relative inline-block select-none">
+      {/* Outlines */}
+      <div
+        className="absolute inset-0 translate-x-[-1px]"
+        style={outlineStyle}
+        aria-hidden="true"
+      >
+        <span className="block font-black tracking-tight leading-[1.02] text-6xl md:text-7xl">
+          {title}
+        </span>
+      </div>
+      <div
+        className="absolute inset-0 translate-x-[1px]"
+        style={outlineStyle}
+        aria-hidden="true"
+      >
+        <span className="block font-black tracking-tight leading-[1.02] text-6xl md:text-7xl">
+          {title}
+        </span>
+      </div>
+      <div
+        className="absolute inset-0 translate-y-[-1px]"
+        style={outlineStyle}
+        aria-hidden="true"
+      >
+        <span className="block font-black tracking-tight leading-[1.02] text-6xl md:text-7xl">
+          {title}
+        </span>
+      </div>
+      <div
+        className="absolute inset-0 translate-y-[1px]"
+        style={outlineStyle}
+        aria-hidden="true"
+      >
+        <span className="block font-black tracking-tight leading-[1.02] text-6xl md:text-7xl">
+          {title}
+        </span>
+      </div>
+
+      {/* Main */}
+      <h1
+        className="relative font-black tracking-tight leading-[1.02] text-6xl md:text-7xl text-white"
+        style={{
+          textShadow: "0px 5px 8px rgba(0,0,0,0.33)",
+        }}
+      >
+        {title}
+      </h1>
+    </div>
+  );
+}
+
 export default function LandingPage() {
   return (
     <div className="min-h-screen text-white">
@@ -23,39 +84,40 @@ export default function LandingPage() {
       <div className="min-h-screen bg-gradient-to-br from-[#1FE0FF] to-[#E15BFF]">
         {/* Decorative bubbles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -right-40 -top-32 h-[420px] w-[420px] rounded-full bg-white/15 blur-[0px]" />
+          <div className="absolute -right-40 -top-32 h-[420px] w-[420px] rounded-full bg-white/15" />
           <div className="absolute -left-44 -bottom-40 h-[520px] w-[520px] rounded-full bg-white/10" />
           <div className="absolute left-1/2 top-20 h-[220px] w-[220px] -translate-x-1/2 rounded-full bg-white/10" />
         </div>
 
-        {/* Content wrapper */}
         <div className="relative">
           {/* HERO */}
           <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center">
             <div className="max-w-4xl mx-auto">
-              {/* Logo (replaces emoji) */}
-              <div
-                className="w-32 h-32 mx-auto mb-8 rounded-3xl shadow-2xl flex items-center justify-center
-                           bg-[#07163A]/35 border border-[#D7B5FF]/40 backdrop-blur-md"
-              >
-                <img
-                  src="/logo512.png"
-                  alt="Park Rides Quest logo"
-                  className="w-24 h-24 object-contain"
-                  draggable={false}
-                />
+              {/* Logo: bigger image, minimal frame */}
+              <div className="mx-auto mb-7 flex items-center justify-center">
+                <div
+                  className="rounded-[26px] p-[6px]
+                             bg-[#07163A]/18 border border-[#D7B5FF]/25 backdrop-blur-md
+                             shadow-[0_18px_55px_rgba(0,0,0,0.22)]"
+                >
+                  <img
+                    src="/logo512.png"
+                    alt="Park Rides Quest logo"
+                    className="w-[132px] h-[132px] md:w-[150px] md:h-[150px] object-contain"
+                    draggable={false}
+                  />
+                </div>
               </div>
 
-              <h1 className="text-6xl md:text-7xl font-black mb-6 tracking-tight drop-shadow-[0_10px_20px_rgba(0,0,0,0.35)]">
-                Park Rides Quest
-              </h1>
+              {/* Fancy title (Flutter-style outline + shadow) */}
+              <PrettyTitle />
 
-              <p className="text-lg md:text-2xl text-white/90 mb-10 leading-relaxed font-semibold">
+              <p className="mt-7 text-lg md:text-2xl text-white/90 mb-10 leading-relaxed font-semibold">
                 Turn your wait time into playtime! Rate rides with friends and family, spark fun
                 debates, and discover which character matches your unique style!
               </p>
 
-              {/* Primary CTA */}
+              {/* CTA */}
               <div className="flex justify-center mb-10">
                 <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
                   <button
@@ -86,7 +148,7 @@ export default function LandingPage() {
                 )}
               </div>
 
-              {/* Stats (glass) */}
+              {/* Stats */}
               <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-2xl mx-auto">
                 {[
                   { value: "200+", label: "Rides to Rate" },
@@ -283,7 +345,6 @@ export default function LandingPage() {
 
           {/* FOOTER */}
           <footer className="mt-10">
-            {/* top center (replaces emoji) */}
             <div className="px-6 pt-16 pb-10 text-center">
               <img
                 src="/logo192.png"
