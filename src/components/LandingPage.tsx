@@ -300,7 +300,7 @@ export default function LandingPage() {
             <div className="px-6 py-14">
               <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-3">
                 <div className="rounded-3xl p-8 bg-[#07163A]/22 border border-white/15 backdrop-blur-md">
-                  <h4 className="text-2xl font-black mb-4">Disney Rides Rating</h4>
+                  <h4 className="text-2xl font-black mb-4">Park Rides Quest</h4>
                   <p className="text-white/80 leading-relaxed font-semibold">
                     An independent fan project for rating and comparing theme park attractions.
                   </p>
