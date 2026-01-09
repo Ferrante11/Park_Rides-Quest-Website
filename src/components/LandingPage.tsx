@@ -103,7 +103,7 @@ export default function LandingPage() {
                   <img
                     src="/logo512.png"
                     alt="Park Rides Quest logo"
-                    className="w-[132px] h-[132px] md:w-[150px] md:h-[150px] object-contain"
+                    className="w-[140px] h-[140px] md:w-[160px] md:h-[160px] object-contain"
                     draggable={false}
                   />
                 </div>
