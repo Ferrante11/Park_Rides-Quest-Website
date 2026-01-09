@@ -33,10 +33,17 @@ export default function LandingPage() {
           {/* HERO */}
           <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center">
             <div className="max-w-4xl mx-auto">
-              {/* Logo */}
-              <div className="w-32 h-32 mx-auto mb-8 rounded-3xl shadow-2xl flex items-center justify-center text-6xl
-                              bg-[#07163A]/35 border border-[#D7B5FF]/40 backdrop-blur-md">
-                🎢
+              {/* Logo (replaces emoji) */}
+              <div
+                className="w-32 h-32 mx-auto mb-8 rounded-3xl shadow-2xl flex items-center justify-center
+                           bg-[#07163A]/35 border border-[#D7B5FF]/40 backdrop-blur-md"
+              >
+                <img
+                  src="/logo512.png"
+                  alt="Park Rides Quest logo"
+                  className="w-24 h-24 object-contain"
+                  draggable={false}
+                />
               </div>
 
               <h1 className="text-6xl md:text-7xl font-black mb-6 tracking-tight drop-shadow-[0_10px_20px_rgba(0,0,0,0.35)]">
@@ -51,10 +58,12 @@ export default function LandingPage() {
               {/* Primary CTA */}
               <div className="flex justify-center mb-10">
                 <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
-                  <button className="inline-flex items-center rounded-2xl px-8 py-5 text-lg font-black
-                                     bg-[#3E7BFF] hover:bg-[#3E7BFF]/90
-                                     shadow-[0_16px_40px_rgba(0,0,0,0.25)]
-                                     border border-white/20 transition-all group">
+                  <button
+                    className="inline-flex items-center rounded-2xl px-8 py-5 text-lg font-black
+                               bg-[#3E7BFF] hover:bg-[#3E7BFF]/90
+                               shadow-[0_16px_40px_rgba(0,0,0,0.25)]
+                               border border-white/20 transition-all group"
+                  >
                     <Apple className="w-6 h-6 mr-3" />
                     Download on the App Store
                     <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -64,19 +73,17 @@ export default function LandingPage() {
 
               {/* Fun chips */}
               <div className="flex flex-wrap justify-center gap-3 mb-12">
-                {[
-                  "Scan • Download • Play in line",
-                  "Up to 8 players",
-                  "Quick • Fun • Simple",
-                ].map((t) => (
-                  <span
-                    key={t}
-                    className="px-4 py-2 rounded-full bg-[#07163A]/30 border border-white/20
-                               backdrop-blur-md text-white/90 font-bold shadow-[0_10px_30px_rgba(0,0,0,0.12)]"
-                  >
-                    {t}
-                  </span>
-                ))}
+                {["Scan • Download • Play in line", "Up to 8 players", "Quick • Fun • Simple"].map(
+                  (t) => (
+                    <span
+                      key={t}
+                      className="px-4 py-2 rounded-full bg-[#07163A]/30 border border-white/20
+                                 backdrop-blur-md text-white/90 font-bold shadow-[0_10px_30px_rgba(0,0,0,0.12)]"
+                    >
+                      {t}
+                    </span>
+                  )
+                )}
               </div>
 
               {/* Stats (glass) */}
@@ -214,12 +221,16 @@ export default function LandingPage() {
                   },
                 ].map((s, i) => (
                   <div key={s.n} className="relative">
-                    <div className="rounded-3xl p-8 text-center
-                                    bg-[#07163A]/30 border border-[#D7B5FF]/35 backdrop-blur-md
-                                    shadow-[0_18px_50px_rgba(0,0,0,0.16)]">
-                      <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center
-                                      text-3xl font-black
-                                      bg-[#3E7BFF] border border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.22)]">
+                    <div
+                      className="rounded-3xl p-8 text-center
+                                 bg-[#07163A]/30 border border-[#D7B5FF]/35 backdrop-blur-md
+                                 shadow-[0_18px_50px_rgba(0,0,0,0.16)]"
+                    >
+                      <div
+                        className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center
+                                   text-3xl font-black
+                                   bg-[#3E7BFF] border border-white/20 shadow-[0_16px_40px_rgba(0,0,0,0.22)]"
+                      >
                         {s.n}
                       </div>
                       <h3 className="text-2xl font-black mb-3">{s.title}</h3>
@@ -241,9 +252,11 @@ export default function LandingPage() {
 
           {/* CTA */}
           <section className="py-20 px-6">
-            <div className="max-w-4xl mx-auto text-center rounded-[32px]
-                            bg-[#07163A]/30 border border-[#D7B5FF]/35 backdrop-blur-md
-                            shadow-[0_24px_70px_rgba(0,0,0,0.22)] p-10 md:p-14">
+            <div
+              className="max-w-4xl mx-auto text-center rounded-[32px]
+                         bg-[#07163A]/30 border border-[#D7B5FF]/35 backdrop-blur-md
+                         shadow-[0_24px_70px_rgba(0,0,0,0.22)] p-10 md:p-14"
+            >
               <h2 className="text-4xl md:text-6xl font-black mb-6">
                 Ready to Discover Your Park Personality?
               </h2>
@@ -253,10 +266,12 @@ export default function LandingPage() {
 
               <div className="flex justify-center">
                 <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
-                  <button className="inline-flex items-center rounded-2xl px-10 py-6 text-xl font-black
-                                     bg-white text-[#07163A] hover:bg-white/95
-                                     shadow-[0_16px_45px_rgba(0,0,0,0.22)]
-                                     transition-all group">
+                  <button
+                    className="inline-flex items-center rounded-2xl px-10 py-6 text-xl font-black
+                               bg-white text-[#07163A] hover:bg-white/95
+                               shadow-[0_16px_45px_rgba(0,0,0,0.22)]
+                               transition-all group"
+                  >
                     <Apple className="w-7 h-7 mr-3" />
                     Download Now
                     <ChevronRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
@@ -266,11 +281,16 @@ export default function LandingPage() {
             </div>
           </section>
 
-          {/* FOOTER (same layout, app palette styling) */}
+          {/* FOOTER */}
           <footer className="mt-10">
-            {/* top center */}
+            {/* top center (replaces emoji) */}
             <div className="px-6 pt-16 pb-10 text-center">
-              <div className="text-4xl mb-4">🎢</div>
+              <img
+                src="/logo192.png"
+                alt="Park Rides Quest logo"
+                className="w-14 h-14 mx-auto mb-4 object-contain"
+                draggable={false}
+              />
               <h3 className="text-3xl font-black mb-3">Park Rides Quest</h3>
               <p className="text-white/80 text-lg mb-8 font-semibold">
                 The ultimate theme park rating experience
@@ -293,10 +313,8 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* divider */}
             <div className="h-px bg-white/15" />
 
-            {/* bottom 3 columns glass */}
             <div className="px-6 py-14">
               <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-3">
                 <div className="rounded-3xl p-8 bg-[#07163A]/22 border border-white/15 backdrop-blur-md">
@@ -305,7 +323,7 @@ export default function LandingPage() {
                     An independent fan project for rating and comparing theme park attractions.
                   </p>
                   <p className="text-white/65 leading-relaxed mt-4 font-semibold">
-                    Not affiliated with The Walt Disney Company.
+                    Not affiliated with any theme park or entertainment company.
                   </p>
                 </div>
 
@@ -336,7 +354,6 @@ export default function LandingPage() {
             </div>
           </footer>
 
-          {/* Small bottom spacer so the last section breathes */}
           <div className="h-6" />
         </div>
       </div>
