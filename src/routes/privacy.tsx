@@ -107,7 +107,7 @@ function PrivacyPage() {
 
       <H2>11. Contact</H2>
       <P>
-        <span className="text-white font-black">support@parkridesquest.app</span>
+        <span className="text-white font-black">support@parkridesquest.com</span>
       </P>
     </SiteShell>
   );
