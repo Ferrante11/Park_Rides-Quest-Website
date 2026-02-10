@@ -94,7 +94,7 @@ function PrivacyPage() {
 
       <H2>8. Your Choices and Rights</H2>
       <P>
-        YThis app uses Firebase Anonymous Authentication and creates an anonymous identifier (UID) on your device. 
+        This app uses Firebase Anonymous Authentication and creates an anonymous identifier (UID) on your device. 
         You may request deletion of your anonymous account identifier and associated data we can reasonably locate 
         (for example: session participation records, ratings, summaries, event logs, and policy acceptance records).
         To request deletion, contact us at:
