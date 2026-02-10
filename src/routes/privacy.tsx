@@ -14,7 +14,7 @@ function P({ children }: { children: any }) {
 
 function PrivacyPage() {
   return (
-    <SiteShell title="Privacy Policy" subtitle="Last updated: January 1, 2026">
+    <SiteShell title="Privacy Policy" subtitle="Last updated: February 11, 2026">
       <H2>1. Introduction</H2>
       <P>
         Park Rides Quest (“we,” “our,” or “the app”) is committed to protecting your privacy and
