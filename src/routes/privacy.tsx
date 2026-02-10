@@ -33,8 +33,8 @@ function PrivacyPage() {
       <h3 className="text-xl font-black mt-6 mb-2">2.2 Information Collected Automatically (Core App Functionality)</h3>
       <ul className="space-y-2 text-white/85 font-semibold list-disc pl-6">
         <li>
-          Anonymous identifier: We use Firebase Anonymous Authentication to create a random,
-          anonymous user ID (UID) so the app can function (e.g., sessions and saving ratings).
+          Anonymous identifier: The app automatically creates an anonymous account identifier (UID) using 
+          Firebase Anonymous Authentication. No username, email, phone number, or password is required.
         </li>
         <li>
           Session and app activity data needed for core functionality, such as session codes,
@@ -94,9 +94,13 @@ function PrivacyPage() {
 
       <H2>8. Your Choices and Rights</H2>
       <P>
-        You may request deletion of data associated with a session by contacting us at:
+        YThis app uses Firebase Anonymous Authentication and creates an anonymous identifier (UID) on your device. 
+        You may request deletion of your anonymous account identifier and associated data we can reasonably locate 
+        (for example: session participation records, ratings, summaries, event logs, and policy acceptance records).
+        To request deletion, contact us at:
         <span className="block mt-2 text-white font-black">support@parkridesquest.app</span>
-        Please include the session code and approximate date/time so we can locate the data.
+        Please include your session code(s) and approximate date/time of use so we can locate and remove the relevant data. 
+        We typically process deletion requests within 30 days.
       </P>
 
       <H2>9. Children’s Privacy</H2>
