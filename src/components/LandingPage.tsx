@@ -147,7 +147,7 @@ function StoreButtons({ variant = "primary" }: { variant?: "primary" | "secondar
         <button className={googleDisabledClass}>
           {USE_OFFICIAL_BADGES ? (
             <img
-              src="/badges/google-play.png"
+              src="/badges/google-play.svg"
               alt="Get it on Google Play (Coming soon)"
               className={variant === "primary" ? "h-7 mr-3" : "h-8 mr-3"}
               draggable={false}
