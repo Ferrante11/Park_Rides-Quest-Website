@@ -186,7 +186,7 @@ export default function LandingPage() {
                              shadow-[0_6px_18px_rgba(0,0,0,0.10)]"
                 >
                   <img
-                    src="/logo512.png"
+                    src="/logo512-new.png"
                     alt="Park Rides Quest logo"
                     className="w-[140px] h-[140px] md:w-[160px] md:h-[160px] object-contain"
                     draggable={false}
